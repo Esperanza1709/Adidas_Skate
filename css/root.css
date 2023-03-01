@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+:root{
+/*Colores*/
+--primary-dark-10: #C1996A;
+--primary-dark-20: #68430b83;
+--primary-light-10: #e2cab2ee;
+--primary-light-20:#c1986a3d;
+--secondary-00: #F1CC08;
+--secondary-light-10:#e0b229b2;
+--secondary-light-20:#fac528ec;
+--neutral-00: #FFFFFF;
+--neutral-light-00:#e6dfdf4f;
+--neutral-01: #000000;
+--neutral-02:#bebbbbfa;
+--neutral-03:#c5c5c538;
+
+/*TIpografías*/
+--type_1: 'Roboto', sans-serif;
+--type_2:  'Quicksand', sans-serif;
+}

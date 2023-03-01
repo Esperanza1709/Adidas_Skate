@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adidas Skateboarding</title>
+    <link rel="stylesheet" href="css/root.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/logotipoadidas.webp" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <!-- HEADER -->
+      <header class="head">
+        <p class="texto">PROMOCIÓN VÁLIDA DURANTE 24 HORAS</p>
+      </header>
+      <!-- NAV -->
+      <nav class="nav">
+        <a class="adidas" target="_blank" href="https://www.adidas.es/"
+          ><img src="img/logotipoadidas.webp" alt="logo"
+        /></a>
+        <ul>
+          <li>
+            <a href="#"
+              >HOMBRE
+              <ul>
+                <li>Free Style</li>
+                <li>Skateboard</li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              >MUJER
+              <ul>
+                <li>Free Style</li>
+                <li>Skateboard</li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              >NIÑO/A
+              <ul>
+                <li>Free Style</li>
+                <li>Skateboard</li>
+              </ul>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              >NOVEDAD
+              <ul>
+                <li>Miembros</li>
+              </ul>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- ASIDE -->
+      <aside class="aside">
+        <h1>Matchbreak Super</h1>
+        <h2>Adidas-Skateboarding</h2>
+        <div class="promocion">
+          <img src="img/adidas.webp" alt="imagen" />
+        </div>
+        <div class="coleccion">
+          <a
+            target="_blank"
+            class="ver"
+            href="https://www.adidas.es/search?q=matchbreak%20super"
+            >VER COLECCIÓN</a
+          >
+        </div>
+      </aside>
+      <!-- MAIN -->
+      <main class="main">
+        <form action="datos.php" method="post">
+          <p>
+            Regístrate a la newsletter de Adidas y participa en el sorteo de las
+            nuevas zapatillas Adidas Skateboarding.
+          </p>
+          <div class="datos_personales">
+            <div class="datos_formulario">
+              <label for="name"
+                >Nombre y Apellidos<span class="red">*</span></label>
+              <input
+                type="text"
+                name="nombre_apellidos"
+                id="name"
+                placeholder="Nombre y Apellidos"
+                tabindex="1"
+                required/>
+            </div>
+            <div class="datos_formulario">
+              <label for="mail"
+                >Correo Electrónico<span class="red">*</span></label>
+              <input
+                type="text"
+                name="email"
+                id="mail"
+                placeholder="Correo Electrónico"
+                tabindex="2"
+                required/>
+            </div>
+            <div class="datos_formulario">
+              <label for="name">Código Postal<span class="red">*</span></label>
+              <input
+                pattern="[0-9]{5}"
+                type="text"
+                name="codigo_postal"
+                id="CP"
+                placeholder="Código Postal"
+                tabindex="3"
+                required/>
+            </div>
+            <div class="condiciones_legales">
+              <label for="legal"
+                ><input
+                  type="checkbox"
+                  name="acepta_condiciones"
+                  id="legal"
+                /><em>Acepto los términos de la promoción</em>
+              </label>
+            </div>
+            <div id="boton">
+              <button type="submit" id="CTA">¡PARTICIPAR!</button>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

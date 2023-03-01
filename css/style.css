@@ -1,0 +1,556 @@
+@charset "utf-8";
+
+*,
+*::after,
+*::before{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+/* ANIMACIONES */
+/* ENCABEZADO */
+@keyframes move{
+    0% {
+        transform: translateY(-2em);
+        opacity: 0; }
+
+    20% {
+        transform: translateY(0);
+        opacity: 1; }
+
+    80% {
+        transform: translateY(0);
+        opacity: 1; }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0; }
+  }
+
+/* GRID */
+.contenedor{
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+    display: grid;
+    grid:
+      "head head head head" auto
+      "nav nav nav nav" auto
+      "aside aside aside main" 1fr
+      / 1fr 1fr 1fr 1fr;
+    gap: 0.1em;
+  }
+  /* HEADER */
+  .head {
+    grid-area: head;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+background-color: var(--neutral-01);
+}
+
+.head p{
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-left: 9.7em;
+    background-color: var(--neutral-01);
+    color: var(--neutral-00);
+    font-size: var(--type_2);
+    font-size: 1.1em;
+    letter-spacing: 1em;
+    text-align: center;
+    animation:move 5s infinite;
+}
+/* NAV */
+.nav { 
+    grid-area: nav; 
+}
+
+/* IMAGEN LOGO MENÚ */
+a.adidas {
+    position: relative;
+    width: 5%;
+    left: 1.5em;
+}
+
+a.adidas img{
+ width: 70%;
+padding-top: 0.3em;
+z-index: 999;
+}
+
+/* BARRA DE NAVEGACIÓN */
+nav.nav{
+    display: flex;
+    position: relative;
+ }
+
+ nav ul{
+    list-style-type: none;
+    font-family: var(--type_1);
+    float: right;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0.7em 6.3em;
+}
+
+nav ul li a{
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;  
+    font-weight: bold;  
+}
+
+nav ul li a:hover{
+    color: var(--primary-dark-20);
+    position: relative;
+}
+
+li a ul{
+    display: none;
+    left: -6.7em;
+}
+
+li a ul li{
+    margin-bottom: -1em;
+}
+
+li a:hover ul{
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    font-size: 1em;
+    color:var(--primary-dark-20);
+    border-bottom: none;
+}
+        
+li a ul li:hover{
+    color: var(--neutral-01);
+    background-color: var(--secondary-light-10);
+}
+
+/* ASIDE */
+.aside { 
+    grid-area: aside;}
+
+/* ENCABEZADOS */
+/* H1 */
+h1{
+    display: block;
+    text-align: center;
+    font-family: var(--type_2);
+    font-size: 4em;
+    letter-spacing: 0.2em;
+    padding-top: 0.5em;
+    color: var(--neutral-01);
+    }
+
+/* H2 */
+h2{
+    text-align: center;
+    font-family:var(--type_1);
+    color: var(--primary-dark-20);
+    font-size: 3em;
+    font-weight: bold;
+    }
+
+/* IMAGEN ZAPATILLA */
+div.promocion img{
+    position: relative;
+    width:43%;
+    height: auto;
+    transform: rotate(15deg);
+    left:25em;
+    top:-2.5em;
+ 
+    }
+
+/* BOTÓN VER COLECCIÓN */          
+ div.coleccion{
+    display: flex;
+    position:relative;
+    left:0.8em;
+    top:-4.5em;
+    width:16%;
+    height: 6vh;
+    padding-top: 0.6em;
+    padding-left: 1em;
+    border-radius: 2em;
+    font-family: var(--type_2);
+    background-color: var(--neutral-02);
+    font-size: 1em;
+    font-weight: bold;
+    border: 0.2em solid var(--neutral-01);
+    }
+
+div.coleccion:hover{
+    background-color: var(--neutral-01);
+    color: var(--secondary-light-10);
+    }
+
+div.coleccion a{
+    color: var(--neutral-01);
+    text-decoration: none;
+    }
+div.coleccion a:hover{
+    text-decoration: none;
+    color: var(--secondary-light-20);
+    }
+    
+/* MAIN */
+.main { 
+    grid-area: main; }
+
+/*FORMULARIO*/
+form:not(p){
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--primary-light-20);
+    border: none;
+    clip-path:polygon(13% 0, 100% 0, 100% 100%, 0 100%);
+    padding-left: 1em;
+    }
+
+    p{
+        width:90%;
+        font-family: var(--type_2);
+        font-size: 1em;
+        font-weight: bold;
+        color: var(--neutral-01);
+        text-align:left;
+        padding-top: 1.2em;
+        padding-left: 3em;
+       padding-bottom: 1.3em;
+        }
+
+    div.datos_formulario{
+         display: flex;
+        flex-direction: column;
+        font-family: var(--type_1);
+        justify-content: start;
+        align-items: start;
+        }
+
+    label{
+        font-size:1rem;
+        color: var(--neutral-01);
+        padding: 1em;
+        margin-left: 2.4em;
+        }
+
+    label span{
+        content:"*";
+        color: rgb(201, 5, 5);
+        padding-left: 0.5em;
+        }
+
+    div.datos_personales input:not(#legal){
+        text-align: left;
+        font-size: 1em;
+        border: none;
+        border-radius: 1.3em;
+        color: var(--text-light);
+        width:64%;
+        height: 5vh;
+        border-bottom: 0.1em solid #C1996A;
+        margin-left: 2.7em;
+        padding-left: 1em;
+        }
+            
+    div.condiciones_legales{
+        font-family: var(--type_1);
+        color: var(--neutral-01);
+        padding-top: 2em;
+        padding-bottom: 4.7em;
+        text-align: left;
+        margin-left: -1em;
+    }
+
+    div.condiciones_legales label{
+        font-size: 0.9em;
+    }
+
+    div.condiciones_legales input{
+        margin-right: 0.3em;
+    }
+
+    /* BOTÓN CTA */
+div#boton button{
+    width: 75%;
+    height: 10vh;
+    background:var(--neutral-01);
+    color: var(--secondary-light-20);
+    font-weight: bold;
+    border: none;
+    box-shadow: 0.2em 0.2em 0.1em var(--secondary-light-20);
+    border-radius: 3em;
+    font-family: var(--type_1);
+    font-size: 2em;
+    text-align: center;
+    margin-left: 1.5em;
+    }
+        
+    div#boton button:hover{
+        background-color: var(--secondary-light-20);
+        color: var(--neutral-01);
+        font-weight: bold;
+        box-shadow: 0.2em 0.2em 0.1em var(--neutral-01);
+    }
+
+    /* RESPONSIVE PARA TABLETS */
+@media (max-width:768px){
+    body{
+        overflow-y: scroll  !important;
+    }
+        .contenedor{
+            display: grid; 
+            grid:
+              "head head head head" auto
+              "nav nav nav nav" auto
+              "aside aside aside aside" 1fr
+              "main main main main" 1fr; 
+    }
+/* HEADER */
+.head p{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 2em;
+    font-size: 1em;
+    letter-spacing: 0.7em;
+}
+
+/* IMAGEN LOGO MENÚ */
+a.adidas {
+    width: 10%;
+    left: 1em;
+}
+
+a.adidas img{
+ width: 80%;
+padding-top: 0.8em;
+padding-left: 0.5em;
+}
+
+/* NAV */
+nav ul li{
+    margin: 0rem 3em;
+    padding-top: 1.5em;
+}
+
+li a ul{
+    left: -3em; 
+}
+
+li a ul li{
+    padding: 0;
+    margin-top: 0.5em;
+}
+
+/* ASIDE */
+.side {
+    width: 100%;
+    height: auto;
+}
+/* ENCABEZADOS */
+/* H1 */
+h1{
+    font-size: 4em;
+    letter-spacing: 0.1em;
+    padding-top: 0.5em;
+    }
+
+/* H2 */
+h2{
+    font-size: 3em;
+    }
+
+/* IMAGEN ZAPATILLA */
+div.promocion img{
+    width:60%;
+    left:11em;
+    transform: none;
+    }
+
+/* BOTÓN VER COLECCIÓN */          
+ div.coleccion{
+    margin-top: 3em;
+    margin-left: 17em;
+    padding-top: 0.9em;
+    padding-left: 1.2em;
+    width:25%;
+    height: 4vh;
+    font-size: 1.1em;
+    }
+
+main{
+   width: 100%;
+   margin-top: -4em;
+}
+/* FORMULARIO */
+form:not(p){
+    background-color: var(--secondary-light-10);
+    }
+p{
+    font-size: 1.5em;
+    padding-left: 6em;
+    padding-bottom: 1em;
+    }
+
+div.datos_formulario{
+    justify-content: center;
+    align-items: center;
+    }
+
+label{
+    font-size:1.7em;
+    padding: 0.5em;
+    margin-left: 2em;
+    }
+
+div.datos_personales input:not(#legal){
+    font-size: 1.5em;
+    width:45%;
+    height: 4vh;
+    margin-left: 2em;
+    text-align: center;
+    }
+
+div.condiciones_legales{
+    text-align: center;
+    padding-bottom: 3em;
+    }
+
+div.condiciones_legales label{
+        font-size: 1.2em;
+    }
+
+div#boton button{
+    width: 50%;
+    height: 5vh;
+    margin-left: 13rem;
+    background:var(--neutral-00);
+    color: var(--primary-dark-20);
+    border: 0.3rem solid var(--primary-dark-20);
+    box-shadow:none;
+    }
+           
+div#boton button:hover{
+    background-color: var(--neutral-01);
+    color: var(--secondary-light-20);
+    border: 0.3rem solid var(--neutral-02);
+    }
+
+}
+
+@media (max-width:576px){
+/* HEADER */
+
+.head p{
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    font-size: 1em;
+    letter-spacing: 0.4em;
+}
+/* IMAGEN LOGO MENÚ */
+a.adidas {
+    width: 15%;
+    left: 0.3em;
+}
+
+/* NAV */
+nav ul li{
+    margin: 0em 1.4em;
+    padding-top: 1.7rem;
+}
+
+li a ul{
+    left: -1.2em; 
+}
+
+/* ENCABEZADOS */
+/* H1 */
+h1{
+    font-size: 3.3em;
+    padding-top: 0.7em;
+    }
+
+    h2{
+        font-size: 2.5em;
+    }
+/* IMAGEN ZAPATILLA */
+div.promocion img{
+    width:80%;
+    left:5.3em;
+    transform: none;
+    }
+
+    /* BOTÓN VER COLECCIÓN */          
+ div.coleccion{
+    margin-top: 3.5em;
+    margin-left: 11em;
+    padding-top: 0.5em;
+    padding-left: 0.7em;
+    width:30%;
+    height: 3vh;
+    background-color: var(--primary-light-20);
+    border:0.1em solid var(--neutral-01)
+    }
+
+    div.coleccion a{
+        color: var(--neutral-01);
+    }
+
+/* FORMULARIO */
+p{
+    text-align: left;
+     margin-left: -1em;
+    font-size: 1.3em;
+    padding-bottom: 1em;
+    }
+
+div.datos_formulario label{
+    font-size: 1.4em;
+    }
+
+div.datos_personales input:not(#legal){
+    width:60%;
+    }
+
+div.condiciones_legales{
+    padding-bottom: 3em;
+        }
+
+div#boton button{
+    width: 60%;
+    height: 6vh;
+    margin-left: 4em;
+    margin-bottom: 0.5em;
+    }
+}
+
+/* RESPONSIVE PARA MÓVILES PEQUEÑOS */
+
+@media (max-width:400px){
+        /* BOTÓN COLECCIÓN */
+        div.coleccion{
+            padding-top: 0.3em;
+            height: 4vh;
+            }
+        /* BOTÓN CTA */
+        div#boton button{
+            margin-bottom: 0.5em;
+            }
+        }
